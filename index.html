@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyPray – Stay Focused, Never Miss a Prayer</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #10B981;
+            --bg: #F8FAFC;
+            --text: #334155;
+            --card-bg: #FFFFFF;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; text-align: center; padding: 4rem 1.5rem; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.25rem; color: #94A3B8; max-width: 600px; margin: 0 auto 1.5rem auto; }
+        .cta-btn { background: var(--accent); color: white; padding: 0.75rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; transition: opacity 0.2s; }
+        .cta-btn:hover { opacity: 0.9; }
+        main { max-width: 900px; margin: -2rem auto 3rem auto; padding: 0 1.5rem; }
+        .card { background: var(--card-bg); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; }
+        ul { list-style-type: none; }
+        ul li { margin-bottom: 0.75rem; position: relative; padding-left: 1.5rem; }
+        ul li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        footer { text-align: center; padding: 2rem; color: #64748B; font-size: 0.875rem; }
+        footer a { color: var(--accent); text-decoration: none; margin: 0 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DailyPray</h1>
+        <p>You don't mean to miss prayers. You just mean to check one thing first. DailyPray closes that gap.</p>
+        <a href="#download" class="cta-btn">Download DailyPray</a>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>How It Works</h2>
+            <ul>
+                <li><strong>Choose Distractions:</strong> Select the apps, categories, and websites that pull you away most.</li>
+                <li><strong>Automatic Locking:</strong> At prayer time, DailyPray locks them down.</li>
+                <li><strong>Confirm & Unlock:</strong> Open the app, pray, then tap and hold to confirm. Everything unlocks and your streak goes up.</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Accurate Times & Qibla</h2>
+                <ul>
+                    <li>Accurate prayer times for your exact location</li>
+                    <li>Live countdown front and centre</li>
+                    <li>Friday midday prayer shown as Jumu'ah</li>
+                    <li>Built-in Qibla compass pointing to the Kaaba</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Wake Up for Fajr</h2>
+                <p>Sleep inertia is real. Before the confirmation screen, DailyPray asks you to solve one small math sum. By the time you answer, you are genuinely awake.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Features Built For Consistency</h2>
+            <ul>
+                <li><strong>Streaks & Rings:</strong> Track prayer and day streaks side by side with a 7-day ring system.</li>
+                <li><strong>The Quran:</strong> All 114 surahs with Arabic text, translations, and full audio recitation.</li>
+                <li><strong>Custom Call Options:</strong> Set unique alarms, adhan voices, or keep it quiet per prayer.</li>
+                <li><strong>Private By Design:</strong> App blocking is handled securely via Apple’s Screen Time on your device. DailyPray never learns which apps you lock.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="download" style="text-align: center;">
+            <h2>Get DailyPray</h2>
+            <p style="margin-bottom: 1.5rem;">Available now on the App Store.</p>
+            <a href="#" class="cta-btn">Download on the App Store</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DailyPray. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://sites.google.com/view/dailypray-terms-and-conditions" target="_blank">Terms of Use</a> | 
+            <a href="https://sites.google.com/view/dailypray-privacy-policy" target="_blank">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>
