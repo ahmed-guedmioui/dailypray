@@ -14,18 +14,33 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background: var(--primary); color: white; text-align: center; padding: 4rem 1.5rem; }
+        
+        header { background: var(--primary); color: white; text-align: center; padding: 3rem 1.5rem 4rem 1.5rem; }
+        .logo { width: 90px; height: 90px; border-radius: 20px; object-fit: cover; margin-bottom: 1.25rem; box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
         header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
         header p { font-size: 1.25rem; color: #94A3B8; max-width: 600px; margin: 0 auto 1.5rem auto; }
-        .cta-btn { background: var(--accent); color: white; padding: 0.75rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; transition: opacity 0.2s; }
-        .cta-btn:hover { opacity: 0.9; }
-        main { max-width: 900px; margin: -2rem auto 3rem auto; padding: 0 1.5rem; }
-        .card { background: var(--card-bg); border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        
+        .cta-btn { background: var(--accent); color: white; padding: 0.85rem 2.25rem; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+        .cta-btn:hover { opacity: 0.95; transform: translateY(-1px); }
+        
+        main { max-width: 1000px; margin: -2.5rem auto 3rem auto; padding: 0 1.5rem; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        
         h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; }
         ul { list-style-type: none; }
         ul li { margin-bottom: 0.75rem; position: relative; padding-left: 1.5rem; }
         ul li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        
+        /* Screenshots Section */
+        .screenshots-section { margin-top: 3rem; margin-bottom: 2rem; text-align: center; }
+        .screenshots-container { display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0.5rem; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+        .screenshots-container::-webkit-scrollbar { height: 8px; }
+        .screenshots-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .screenshot-item { flex: 0 0 220px; scroll-snap-align: center; background: #000; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 4px solid #1e293b; }
+        .screenshot-item img { width: 100%; height: auto; display: block; }
+
         footer { text-align: center; padding: 2rem; color: #64748B; font-size: 0.875rem; }
         footer a { color: var(--accent); text-decoration: none; margin: 0 0.5rem; }
     </style>
@@ -33,9 +48,10 @@
 <body>
 
     <header>
+        <img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/logo.png" alt="DailyPray Logo" class="logo">
         <h1>DailyPray</h1>
         <p>You don't mean to miss prayers. You just mean to check one thing first. DailyPray closes that gap.</p>
-        <a href="#download" class="cta-btn">Download DailyPray</a>
+        <a href="https://apps.apple.com/ma/app/dailypray-muslim-prayer-focus/id6797254164" target="_blank" class="cta-btn">Download on the App Store</a>
     </header>
 
     <main>
@@ -46,6 +62,19 @@
                 <li><strong>Automatic Locking:</strong> At prayer time, DailyPray locks them down.</li>
                 <li><strong>Confirm & Unlock:</strong> Open the app, pray, then tap and hold to confirm. Everything unlocks and your streak goes up.</li>
             </ul>
+        </div>
+
+        <!-- App Screenshots Showcase -->
+        <div class="screenshots-section">
+            <h2 style="margin-bottom: 1rem;">A Sneak Peek Inside</h2>
+            <div class="screenshots-container">
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/01.png" alt="DailyPray Screenshot 1"></div>
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/02.png" alt="DailyPray Screenshot 2"></div>
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/03.png" alt="DailyPray Screenshot 3"></div>
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/04.png" alt="DailyPray Screenshot 4"></div>
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/05.png" alt="DailyPray Screenshot 5"></div>
+                <div class="screenshot-item"><img src="https://raw.githubusercontent.com/ahmed-guedmioui/dailypray/refs/heads/main/06.png" alt="DailyPray Screenshot 6"></div>
+            </div>
         </div>
 
         <div class="grid">
@@ -77,8 +106,8 @@
 
         <div class="card" id="download" style="text-align: center;">
             <h2>Get DailyPray</h2>
-            <p style="margin-bottom: 1.5rem;">Available now on the App Store.</p>
-            <a href="#" class="cta-btn">Download on the App Store</a>
+            <p style="margin-bottom: 1.5rem;">Start your 7-day free trial on the App Store today.</p>
+            <a href="https://apps.apple.com/ma/app/dailypray-muslim-prayer-focus/id6797254164" target="_blank" class="cta-btn">Download on the App Store</a>
         </div>
     </main>
 
